@@ -1,6 +1,6 @@
-package org.example._2025
+package org.example._2025._1
 
-const val testInput = """
+val testInput = """
 L68
 L30
 R48
