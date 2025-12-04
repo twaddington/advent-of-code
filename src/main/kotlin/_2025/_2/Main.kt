@@ -8,11 +8,30 @@ fun rangeFromString(value: String): LongRange {
 }
 
 fun isInvalid(value: Long): Boolean {
-    val productId = value.toString()
-    val isEven = productId.length % 2 == 0
-    if (!isEven) return false
-    val parts = productId.chunked(productId.length / 2)
-    return parts[0] == parts[1]
+    val stringValue = value.toString()
+    val length = stringValue.length
+    if (length == 1) {
+        return false
+    }
+
+    val chars = stringValue.toCharArray()
+    if (chars.distinct().size == 1) {
+        return true
+    }
+    if (chars.size < 4) {
+        return false
+    }
+
+    val divisors = (2..<length)
+        .filter { length % it == 0 }
+
+    for (n in divisors) {
+        val chunks = stringValue.chunked(n)
+        if (chunks.distinct().size == 1) {
+            return true
+        }
+    }
+    return false
 }
 
 fun main() {
