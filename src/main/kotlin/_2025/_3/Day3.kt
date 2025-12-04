@@ -30,7 +30,7 @@ object Day3 {
 }
 
 fun main() {
-    val input = object {}.javaClass.getResource("/2025/Day3_input.txt")!!.readText()
+    val input = object {}.javaClass.getResource("/2025/Day3_test.txt")!!.readText()
     val lines = input.lines()
 
     var total = 0
