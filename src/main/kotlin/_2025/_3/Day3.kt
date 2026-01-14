@@ -25,10 +25,6 @@ class Bank(val value: String) {
     }
 }
 
-object Day3 {
-    // TODO
-}
-
 fun main() {
     val input = object {}.javaClass.getResource("/2025/Day3_test.txt")!!.readText()
     val lines = input.lines()
@@ -41,3 +37,6 @@ fun main() {
     }
     println(total)
 }
+
+// Answer (Part 1): 357
+// Answer (Part 2): 3121910778619
