@@ -1,4 +1,4 @@
-
+package org.example._2025._5
 
 fun main() {
     val input = object {}.javaClass.getResource("/2025/Day5_input.txt")!!.readText()
